@@ -16,6 +16,10 @@ require('../css/animations.css');
 
 require('../css/SuperStyleSheet.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -42,7 +46,9 @@ var CircleImage = function (_Component) {
             animationIterationCount: props.aniCount,
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
-            animationDuration: props.aniDur
+            animationDuration: props.aniDur,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         return _this;
     }
@@ -62,14 +68,26 @@ var CircleImage = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _CIRCLEIMG;
+            var _circleimg;
 
-            var CIRCLEIMG = (_CIRCLEIMG = {
-                borderRadius: "100%",
-                overflowX: 'hidden',
-                overflowY: 'hidden'
-            }, _defineProperty(_CIRCLEIMG, 'borderRadius', "100%"), _defineProperty(_CIRCLEIMG, 'animationIterationCount', this.state.animationIterationCount), _defineProperty(_CIRCLEIMG, 'animationTimingFunction', this.state.animationTimingFunction), _defineProperty(_CIRCLEIMG, 'animationName', this.state.animationName), _defineProperty(_CIRCLEIMG, 'animationDuration', this.state.animationDuration), _CIRCLEIMG);
-            return _react2.default.createElement('img', { style: CIRCLEIMG, id: this.state.id, className: 'img-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
+            var CIRCLEIMG = _nestingstyles2.default.create({
+                circleimg: (_circleimg = {
+                    borderRadius: "100%",
+                    overflowX: 'hidden',
+                    overflowY: 'hidden'
+                }, _defineProperty(_circleimg, 'borderRadius', "100%"), _defineProperty(_circleimg, 'animationIterationCount', this.state.animationIterationCount), _defineProperty(_circleimg, 'animationTimingFunction', this.state.animationTimingFunction), _defineProperty(_circleimg, 'animationName', this.state.animationName), _defineProperty(_circleimg, 'animationDuration', this.state.animationDuration), _circleimg),
+                '@media screen and (max-width: 440px)': {
+                    circleimg: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                    circleimg: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            return _react2.default.createElement('img', { style: CIRCLEIMG.circleimg, id: this.state.id, className: 'img-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
         }
     }]);
 

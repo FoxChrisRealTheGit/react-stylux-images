@@ -1,7 +1,7 @@
 {
   "name": "react-stylux-images",
-  "version": "0.2.0",
-  "description": "The images and carousel mechanic of react-stylux",
+  "version": "0.2.1",
+  "description": "The images mechanic of react-stylux",
   "main": "index.js",
   "scripts": {
     "build": "babel lib -d ./",

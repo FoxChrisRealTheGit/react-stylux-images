@@ -16,6 +16,10 @@ require('../css/animations.css');
 
 require('../css/SuperStyleSheet.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41,7 +45,9 @@ var RoundedRectangleImage = function (_Component) {
             animationIterationCount: props.aniCount,
             animationTimingFunction: props.aniTime,
             animationName: props.aniName,
-            animationDuration: props.aniDur
+            animationDuration: props.aniDur,
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         return _this;
     }
@@ -61,14 +67,26 @@ var RoundedRectangleImage = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var ROUNDEDRECTANGLEIMG = {
-                borderRadius: "30%",
-                animationIterationCount: this.state.animationIterationCount,
-                animationTimingFunction: this.state.animationTimingFunction,
-                animationName: this.state.animationName,
-                animationDuration: this.state.animationDuration
-            };
-            return _react2.default.createElement('img', { style: ROUNDEDRECTANGLEIMG, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
+            var ROUNDEDRECTANGLEIMG = _nestingstyles2.default.create({
+                roundedrectangleimg: {
+                    borderRadius: "30%",
+                    animationIterationCount: this.state.animationIterationCount,
+                    animationTimingFunction: this.state.animationTimingFunction,
+                    animationName: this.state.animationName,
+                    animationDuration: this.state.animationDuration
+                },
+                '@media screen and (max-width: 440px)': {
+                    roundedrectangleimg: {
+                        display: this.state.smDis
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                    roundedrectangleimg: {
+                        display: this.state.mdDis
+                    }
+                }
+            });
+            return _react2.default.createElement('img', { style: ROUNDEDRECTANGLEIMG.roundedrectangleimg, id: this.state.id, className: 'recimg-' + this.state.size + ' ' + this.state.className, src: this.state.childs[0], alt: this.state.childs[1] });
         }
     }]);
 

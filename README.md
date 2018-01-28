@@ -1,8 +1,8 @@
 # react-stylux
 
-This is currently a very alpha stage project, documentation will be lack luster for a few weeks. Please stand by while testing occurs. It should also be noted that no items are responsive, and are only psuedo responsive to the extent that flex-wrap is responsive. 
+**This project is part of the larger react-stylux library.**
 
-Utilizing three simple component types, this project simplifies layout and front-end considerations for react projects. The three component types are: containers (subject to change), holders, and blocks. Containers (subject to change) define the horizonal space and act as a wrapper for all blocks. Holders then go inside of the container to define the space for the blocks. Holders can go inside of Holders to further define space. Each holder has a pre determinded child length and will render children placed into the holder.
+This is currently a very alpha stage project, documentation will be lack luster for a few weeks. Please stand by while testing occurs. Responsive implementation is in its infancy and will continue to improve. There are currently three sizes, please see Responsive notes for more information.
 
 ## Getting Started
 
@@ -11,12 +11,12 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 ```
-npm install --save react-stylux
+npm install --save react-stylux-images
 ```
 
 ## How To Use Stylux
 
-### Included in the base version of react-stylux is:
+### Included in the images of react-stylux is:
 * Figure
 * Circle Image
 * Oval Image
@@ -27,12 +27,8 @@ npm install --save react-stylux
 * Tall Rectangle Image
 * Tall Rounded Rectangle Image
 * Hero 1-5
-* Carousels 1-5
 
 #### Currently almost done:
-* Carousel 2
-* Carousel 3
-* Carousel 4
 * Oval Image
 
 ### Step by step:
@@ -122,6 +118,86 @@ Tall Rectangle Image Sizes:
 * exlg - 700px X 1137px
 
 
+
+### Image Specific
+
+There are currently six predefined image sizes.
+Large Sizes:
+Non Rectangle Image sizes:
+* tn - 50px X 50px
+* exsm - 90px X 90px
+* sm - 150px X 150px
+* md - 300px X 300px
+* lg - 500px X 500px
+* exlg - 700px X 700px
+
+Rectangle Image Sizes:
+* tn - 50px X 50px (Not finished)
+* exsm - 81px X 50px
+* sm - 243px X 150px
+* md - 485px X 300px
+* lg - 809px X 500px
+* exlg - 1137px X 700px
+
+Tall Rectangle Image Sizes:
+* tn - 50px X 50px (Not finished)
+* exsm - 50px X 81px
+* sm - 150px X 243px
+* md - 300px X 485px
+* lg - 500px X 809px
+* exlg - 700px X 1137px
+
+Medium Sizes:
+Non Rectangle Image sizes:
+* tn - 50px X 50px
+* exsm - 90px X 90px
+* sm - 150px X 150px
+* md - 300px X 300px
+* lg - 500px X 500px
+* exlg - 700px X 700px
+
+Rectangle Image Sizes:
+* tn - 50px X 50px (Not finished)
+* exsm - 81px X 50px
+* sm - 243px X 150px
+* md - 485px X 300px
+* lg - 809px X 500px
+* exlg - 1137px X 700px
+
+Tall Rectangle Image Sizes:
+* tn - 50px X 50px (Not finished)
+* exsm - 50px X 81px
+* sm - 150px X 243px
+* md - 300px X 485px
+* lg - 500px X 809px
+* exlg - 700px X 1137px
+
+Small Sizes:
+Non Rectangle Image sizes:
+* tn - 50px X 50px
+* exsm - 90px X 90px
+* sm - 150px X 150px
+* md - 300px X 300px
+* lg - 500px X 500px
+* exlg - 700px X 700px
+
+Rectangle Image Sizes:
+* tn - 50px X 50px (Not finished)
+* exsm - 81px X 50px
+* sm - 243px X 150px
+* md - 485px X 300px
+* lg - 809px X 500px
+* exlg - 1137px X 700px
+
+Tall Rectangle Image Sizes:
+* tn - 50px X 50px (Not finished)
+* exsm - 50px X 81px
+* sm - 150px X 243px
+* md - 300px X 485px
+* lg - 500px X 809px
+* exlg - 700px X 1137px
+
+
 #### Images (all names subject to change)
 
 ##### CircleImage
@@ -134,6 +210,8 @@ Tall Rectangle Image Sizes:
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -155,6 +233,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -176,6 +256,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -198,6 +280,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -219,6 +303,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -240,6 +326,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -261,6 +349,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -282,6 +372,8 @@ this is the alt tag
     aniTime
     aniName
     aniDur
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: image and alt tag
@@ -301,6 +393,8 @@ this is the alt tag
     figCapid
     figClassName
     figCapClassName
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts and renders two children: first child and a caption child
@@ -331,6 +425,8 @@ These were made to integrate with the Carousels, but can be used where ever.
     height = 'inherit'
     id
     className
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts three children and a background
@@ -362,7 +458,9 @@ This accepts three children and a background
     heroid
     bottomid
     heroClassName
-    bottomClassNAme
+    bottomClassName
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts one child and a background
@@ -385,6 +483,8 @@ This accepts one child and a background
     backgroundSize
     width
     height
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts three children and a background
@@ -408,6 +508,8 @@ This accepts three children and a background
     height
     id
     className
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts three children and a background
@@ -429,6 +531,8 @@ This accepts three children and a background
     backgroundSize
     width 
     height
+    smdis = 'flex'
+    mddis = 'flex'
     >
 ```
 This accepts seven children and a background
@@ -443,161 +547,6 @@ This accepts seven children and a background
     ?
     ?
 </Hero5>
-```
-
-### Special Stuff
-
-#### Carousels
-
-
-##### Carousel1
-```
-<Carousel1
-    arrowColor = 'white'
-    background = 'black'
-    padding
-    height: '450px'
-    sliderTimer = '5000'
-    mainid
-    leftArrowid
-    rightArrowid
-    sliderid
-    mainClassName
-    leftArrowClassName
-    rightArrowClassName
-    sliderClassName
-    >
-
-```
-This accept unlimited? children and render as slides
-```
-<Carousel1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-</Carousel1>
-```
-
-
-##### Carousel2
-**Not Finished**
-```
-<Carousel2
-    arrowColor = 'white'
-    background = 'black'
-    padding
-    height: '450px'
-    sliderTimer = '5000'
-    mainid
-    sliderid
-    mainClassName
-    sliderClassName
-    >
-
-```
-This accept unlimited? children and render as slides
-```
-<Carousel2>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-</Carousel2>
-```
-
-
-##### Carousel3
-**Not Finished**
-```
-<Carousel3
-    arrowColor = 'white'
-    background = 'black'
-    padding
-    height: '450px'
-    sliderTimer = '5000'
-    mainid
-    leftArrowid
-    rightArrowid
-    sliderid
-    mainClassName
-    leftArrowClassName
-    rightArrowClassName
-    sliderClassName
-    >
-
-```
-This accept unlimited? children and render as slides
-```
-<Carousel3>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-</Carousel3>
-```
-
-
-##### Carousel4
-**Not Finished**
-```
-<Carousel4
-    arrowColor = 'white'
-    background = 'black'
-    padding
-    height: '450px'
-    sliderTimer = '5000'
-    mainid
-    sliderid
-    mainClassName
-    sliderClassName
-    >
-
-```
-This accept unlimited? children and render as slides
-```
-<Carousel4>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-</Carousel4>
-```
-
-
-##### Carousel5
-```
-<Carousel5
-    arrowColor = 'white'
-    background = 'black'
-    padding
-    height: '450px'
-    sliderTimer = '5000'
-    mainid
-    sliderid
-    mainClassName
-    sliderClassName
-    >
-
-```
-This accept unlimited? children and render as slides
-```
-<Carousel5>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-    <Hero1 image={`url{image1}`}>
-    </Hero1>
-</Carousel5>
 ```
 
 ## Known Bugs
@@ -626,22 +575,8 @@ No Contributions will be accepted outside of the project team until the project 
 ## Versioning
 for a more detailed list of changes, please refer to the changelog
 
-**0.2.0**
-* Added media queries to containers, holders, headings, and pargaraphs
-* added display ability through props
-* updated readme
-
-**0.1.0**
-* major name changes will break all prior versions, see changelog
-* Heading/Paragraph blocks have text align, height and width props available
-* css reset hooked up to every block
-
-**0.0.12**
-* documentation added to readme
-
-**0.0.10** works
-* this is the furthest back that is mostly working
-
+**0.2.1**
+* updated placeholder media queries but not fully implemented
 
 ## Authors
 
@@ -661,76 +596,6 @@ This is licensed under MIT license. If used in any project, please give ackknowl
 
 
 ## Changelog
-**0.2.0**
-* fixed carousel componentWillUnmount - still needs testing, will probably still show error in console
-* added smdis && mddis to every container, holder, heading blocks, paragraph blocks, and image blocks
-* added media queries for max-width 481px and minwidth 482px max-wdith 1200px everything else should render above 1200px
-* adding in placeholder sizes until more responsive testing occurs
-* readme updated for changes
-* new animation and responsive design sections added to readme
-
-**0.1.6**
-* added lifecycle componentWillUnmount to carousels to stop interval
-* added lifecycle componentWillRecieveProps to most blocks to allow for render updates
-
-**0.1.5**
-* added Table1 and Table2
-* added animation path to blocks (feature not fully implemented)
-* added the outline for animation integration into basic blocks (feature not fully implemented)
-* moved most children to array into componentdidmount to set children on state
-* fixed navbar1 classname & id
-* lowered dropdownnav5 default text size
-* fixed horizontal ticker 1
-* readme updated for changes
-
-**0.1.4**
-
-* fixed dropdownnav1
-* added togglePlace onto toggler2, this uses flexDirection to change toggle place eg 'column-reverse' || 'row' etc...
-* changed toggler1 position to fixed from absolute, still changeable through props.
-* added modul1, popup with an x close in the upper right corner
-* navigation font sizes adjusted (needs more work)
-
-* readme updated for changes
-
-
-**0.1.3**
-
-* Fixed Holders 8-13 block 5 styles
-* got rid of a tags in Brands, will rework Brand Blocks
-* text-shadow added to headings and paragraphs
-* border, border-left, border-right, border-top, border-bottom added to headings, paragraphs, holders, and toggler 1 & 2
-* added box-shadow to dropdownnav1 and toggler1
-* border-radius, text-align, and color added to dropdownnav1
-* color also added to navbar, subnav 1 & 2
-* got rid of default yellow hover highlight will be allow for easier adjusting of this soon
-* toggler 1 now has z-index of 2000
-* color, border, weight, shadow, margin, padding, variant, and background added to the toggler 1 & 2 button
-
-* readme updated to reflect the changes
-
-**0.1.0**
-* text align added to heading and paragraph blocks
-* Width and Height now available for heading and paragraph blocks
-
-* mainHeading name changed to H1 + num
-* Heading name changed to H2 + num
-* SubHeading name changed to H3 + num
-* SecondarySubHeading name changed to H4 + num
-* Paragraph name changed to P + num
-* PullQuote name changed to PLQ + num
-
-* z Index of 1000 added to the DropDownNav1
-* z Index of 200 added to the SubNavBAr1, this fixes a stacking issue
-
-* css reset hooked up to every block
-
-* readme updated to reflect changes
-
-* fixed Holder4 block 3-5 styles
-
-**0.0.12**
-* readme was updated with minor documentation
-
-**0.0.10**
-* baselineish that things are mostly working
+**0.2.1**
+* updated media queries
+* updated readme

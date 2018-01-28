@@ -16,6 +16,10 @@ require('../css/animations.css');
 
 require('../css/SuperStyleSheet.css');
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39,7 +43,9 @@ var Figure = function (_Component) {
             figCapid: props.figCapid,
             figClassName: props.figClassName,
             figCapClassName: props.figCapClassName,
-            childs: ''
+            childs: '',
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         return _this;
     }
@@ -59,18 +65,32 @@ var Figure = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            var CAPTION = {
-                padding: '10px',
-                color: 'gray',
-                textAlign: 'center'
-            };
+            var CAPTION = _nestingstyles2.default.create({
+                caption: {
+                    padding: '10px',
+                    color: 'gray',
+                    textAlign: 'center'
+                },
+                '@media screen and (max-width: 440px)': {
+                    caption: {
+                        display: this.state.smDis,
+                        fontSize: '6em'
+                    }
+                },
+                '@media screen and (min-width: 441px) and (max-width: 1200px)': {
+                    caption: {
+                        display: this.state.mdDis,
+                        fontSize: '6em'
+                    }
+                }
+            });
             return _react2.default.createElement(
                 'figure',
                 { id: this.state.figid, className: this.state.figClassName },
                 this.state.childs[0],
                 _react2.default.createElement(
                     'figcaption',
-                    { style: CAPTION, id: this.state.figCapid, className: this.state.figCapClassName },
+                    { style: CAPTION.caption, id: this.state.figCapid, className: this.state.figCapClassName },
                     this.state.childs[1]
                 )
             );

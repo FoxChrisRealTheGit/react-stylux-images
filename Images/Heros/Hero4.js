@@ -18,6 +18,10 @@ var _Holder = require('../../Holders/Holder1');
 
 var _Holder2 = _interopRequireDefault(_Holder);
 
+var _nestingstyles = require('nestingstyles');
+
+var _nestingstyles2 = _interopRequireDefault(_nestingstyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -44,7 +48,9 @@ var Hero4 = function (_Component) {
             height: props.height,
             id: props.id,
             className: props.className,
-            childs: ''
+            childs: '',
+            smdis: props.smDis || 'flex',
+            mddis: props.mdDis || 'flex'
         };
         return _this;
     }
